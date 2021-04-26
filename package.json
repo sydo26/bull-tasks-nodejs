@@ -1,0 +1,33 @@
+{
+  "name": "bull-tasks-nodejs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/sydo26/bull-tasks-nodejs.git",
+  "author": "sydo26 <sydoafk@gmail.com>",
+  "license": "MIT",
+
+  "_moduleAliases": {
+    "@": ".",
+    "@config": "src/config",
+    "@lib": "src/app/lib",
+    "@jobs": "src/app/jobs",
+    "@controller": "src/app/controller"
+  },
+
+  "scripts": {
+    "dev": "npm-run-all -p dev:*",
+    "dev:server": "nodemon ./src/index.js",
+    "dev:queues": "nodemon ./src/queues.js"
+  },
+  "dependencies": {
+    "bull": "^3.22.3",
+    "bull-board": "^1.7.2",
+    "express": "^4.17.1",
+    "module-alias": "^2.2.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7",
+    "npm-run-all": "^4.1.5",
+    "sucrase": "^3.18.1"
+  }
+}
